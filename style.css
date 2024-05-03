@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --magenta: hsl(300, 69%, 71%);
+
+  --headings: "Poppins", sans-serif;
+  --body: "Open Sans", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--body);
+  background-color: var(--violet);
+  line-height: 1.5;
+  color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--headings);
+}
+
+img {
+  max-width: 90%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.contenedor {
+}
+.primera-parte {
+  background-image: url(./images/bg-mobile.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.primera-parte .image-1 {
+  padding: 35px;
+  width: 140px;
+}
+.primera-parte .image-2 {
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.segunda-parte {
+  text-align: center;
+  padding: 30px;
+}
+
+.segunda-parte h2 {
+  margin-bottom: 10px;
+}
+
+.segunda-parte p {
+  margin-bottom: 25px;
+}
+
+.btn {
+  width: 60%;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  color: var(--violet);
+  margin-bottom: 100px;
+  cursor: pointer;
+}
+.btn:hover{
+    background-color: var(--magenta);
+    color: #fff;
+}
+
+.icons a {
+  font-size: 30px;
+  margin-right: 10px;
+}
+.icons a:hover i{
+    color: rgba(0, 0, 0, 0.839);
+}
+
+.icons a i {
+  color: #fff;
+  background-color: var(--violet);
+}
+
+
+@media (min-width: 640px) {
+    body{
+        background-image: url(./images/bg-mobile.svg);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+  .contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+  }
+  .primera-parte {
+    background-image: none;
+    width: 60%;
+  }
+  .primera-parte .image-2{
+    padding: 0;
+  }
+  .segunda-parte{
+    text-align: start ;
+    width: 40%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .segunda-parte h2 {
+    font-size: 2.5rem;
+  }
+  .btn{
+    margin-bottom: 0;
+    width: 150px;
+  }
+  .icons{
+    position: absolute;
+    bottom: -130px;
+    right: 30px;
+  }
+}
